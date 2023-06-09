@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Grid tab</title>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+	}
+	.main{
+	width:80%;
+	margin: 20px auto;
+	}
+	h1{
+	padding:15px;
+	border:2px solid;
+	width:350px;
+	margin: 30px auto;
+	text-align:center;
+	}
+	a{
+	margin:15px;
+	display:inline-block;
+	padding:15px;
+	border:2px solid;
+	}
+	div:nth-child(odd){
+	background-color:#018383;
+	color:white;
+	padding:10px;
+	border:2px solid;
+	}
+	div:nth-child(even){
+	background-color:#02a8a8;
+	color:white;
+	padding:10px;
+	border:2px solid;
+	}
+	
+	
+	.parent{
+	margin-top:20px;
+	font-size:30px;
+	margin:10px;
+    display: grid;
+	grid-gap:10px;
+    grid-template-columns: 200px 300px 300px;
+    grid-template-rows: 100px 200px 300px;	
+	}
+
+	.parent_2{
+	font-size:30px;
+	margin:10px;
+    display: grid;
+	grid-gap:10px;
+    grid-template-columns:33.3% 33.3% 33.3% ;
+    grid-auto-rows: 200px;	
+	}
+
+	.one_1{	
+	grid-column :span 2;
+	}
+	.eight_1{	
+	grid-row : span 2;
+	}
+	
+	
+	.parent_3{
+	font-size:30px;
+	margin:10px;
+    display: grid;
+	grid-gap:10px;
+    grid-template-columns:33.3% 33.3% 33.3% ;
+    grid-auto-rows: 200px;	
+	}
+	.one_3{
+	grid-column: 3/4;
+	}
+	.six_3{
+	<!-- grid-column: 3/4; -->
+	<!-- grid-row: 3/5; -->
+	}
+	.three_3{
+	grid-row: 1/4;
+	<!-- grid-column: 3/4; -->
+	}
+	
+	
+	
+	.parent_4{
+	font-size:30px;
+	margin:10px;
+    display: grid;
+	grid-gap:10px;
+    grid-template-columns:33.3% 33.3% 33.3% ;
+    grid-auto-rows: 200px;
+	grid-template-areas: "one one one" "two three three";
+	}
+		.one_4{
+		grid-area: one;
+		}
+		.two_4{
+		grid-area: two;
+		}
+		.three_4{
+		grid-area: three;
+		}
+</style>
+
+<body>
+
+<section class="main">
+	<h1> Open the link to refer
+	<a href="https://www.youtube.com/watch?v=Ak0emMY6U10&t=580s" target="_blank"> Click to refer the grid concept in <br>YouTube</a></h1>
+
+	<hr>
+	<hr>
+	<hr>
+	<!--  FIRST GRID start -->
+	<section class="parent">
+	
+		<div class="one">1</div>
+		<div class="two">2</div>
+		<div class="three">3</div>
+		<div class="four">4</div>
+		<div class="five">5</div>
+		<div class="six">6</div>
+		<div class="seven">7</div>
+		<div class="eight">8</div>
+		<div class="nine">9</div>
+
+	</section>
+	<br>
+	<br>
+	<hr>
+	<hr>
+	<hr>
+	<h1> parent_2 Span</h2>
+	<br>
+	<br>
+	
+		 <!-- SECOND using SPAN -->
+		 <h2> Using SPAN</h2>
+		 <ul>
+			<h2>
+			<li>grid-column :span 2;</li>
+			<li> grid-row:span 2;</li>
+			</h2>
+		</ul>
+		
+	<section class="parent_2">
+	
+		<div class="one_1">1) is applied >> <br>grid-column :span 2; </div>
+		<div class="two_1">2)</div>
+		<div class="three_1">3)</div>
+		<div class="four_1">4)</div>
+		<div class="five_1">5)</div>
+		<div class="six_1">6)</div>
+		<div class="seven_1">7)</div>
+		<div class="eight_1">8) is applied >><br> grid-row:span 2;</div>
+		<div class="nine_1">9)</div>
+
+	</section>
+	
+	<br>
+	<br>
+	<hr>
+	<hr>
+	<hr>
+	<h1> parent_3</h2>
+	<br>
+	<br>
+	
+	<!-- THIRD using GRID (i) row (ii)column -->
+	
+	
+	<h2> Using GRID (i) row (ii)column</h2>
+	<h2> As like as span </h2>
+	<h2> It can uses to replace the place (or) position</h2>
+	
+	<section class="parent_3">
+	
+		<div class="one_3">1) is applied >><br> grid-column: 3/4; </div>
+		<div class="two_3">2)</div>
+		<div class="three_3">3)is applied >> <br> grid-row: 1/4; </div>
+		<div class="four_3">4)</div>
+		<div class="five_3">5)</div>
+		<div class="six_3">6)</div>
+		<div class="seven_3">7)</div>
+		<div class="eight_3">8)</div>
+		<div class="nine_3">9)</div>
+
+	</section>
+	
+	<br>
+	<br>
+	<hr>
+	<hr>
+	<hr>
+	<h1> parent_4 Area</h2>
+	<br>
+	<br>
+	<!-- AREA section -->
+	
+	<h2> Colon " one one one " >> refer <b> row</b></h2>
+	<h2> The one >> is a class name. its refer the <b> column</b> </h2> 
+	<section class="parent_4">
+	
+		<div class="one_4">1) is applied >> grid-template-areas: "one one one" "two three three";<br>
+		And below we want to mention tha indivdual class name <br>.one_4{ grid-area: one; }	
+		</div>
+		<div class="two_4">2)</div>
+		<div class="three_4">3)is applied >><br> grid-template-areas: "one one one" "two three three"<br>
+			.two_4{	grid-area: two;	} <br> 
+		    .three_4{ grid-area: three;	}
+		</div>
+		<div class="four_4">4)</div>
+		<div class="five_4">5)</div>
+		<div class="six_4">6)</div>
+		<div class="seven_4">7)</div>
+		<div class="eight_4">8)</div>
+		<div class="nine_4">9)</div>
+
+	</section>
+	
+	
+	
+</section>
+
+
+</body>
+</html>
